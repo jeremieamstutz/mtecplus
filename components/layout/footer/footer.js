@@ -5,9 +5,12 @@ export function Footer() {
 	return (
 		<footer className={s.footer}>
 			<div className={s.logo}>MTEC+</div>
-			<div className={s.location}>
+			<Link
+				className={s.location}
+				href="https://www.google.ch/maps/place/ETH+CAB/@47.3783525,8.5466101,17z/data=!3m1!4b1!4m5!3m4!1s0x479aa1c6a08ae0a7:0xcdc0a44516154f70!8m2!3d47.3783489!4d8.5487988"
+			>
 				CAB E12.2, ETHZ, Zürich, Switzerland
-			</div>
+			</Link>
 			<div className={s.socials}>
 				<Link href="https://www.instagram.com/obis_eth/">
 					<svg
