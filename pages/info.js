@@ -6,7 +6,7 @@ export default function Info() {
 		<>
 			<Head>
 				<style>
-					{':root { --background-color: #d4a373 !important; }'}
+					{':root { --background-color: #e8d9ca !important; }'}
 				</style>
 			</Head>
 			<Hero title="Info" />

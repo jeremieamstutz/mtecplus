@@ -6,7 +6,7 @@ export default function Home() {
 		<>
 			<Head>
 				<style>
-					{':root { --background-color: #ccd5ae !important; }'}
+					{':root { --background-color: #e0e5ce !important; }'}
 				</style>
 			</Head>
 			<Hero title="MTEC+" />

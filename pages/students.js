@@ -5,12 +5,18 @@ import { members as students } from 'lib/constants/members'
 import { Member } from 'components/elements'
 
 import s from 'styles/pages/students.module.css'
+import Head from 'next/head'
 
 const ALPHABET = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
 
 export default function Students() {
 	return (
 		<>
+			<Head>
+				<style>
+					{':root { --background-color: #ecd7d1 !important; }'}
+				</style>
+			</Head>
 			<div style={{ padding: '2rem' }}>
 				<h1>Student Directory</h1>
 			</div>
