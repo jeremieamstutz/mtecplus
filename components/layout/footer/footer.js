@@ -9,7 +9,7 @@ export function Footer() {
 				CAB E12.2, ETHZ, Zürich, Switzerland
 			</div>
 			<div className={s.socials}>
-				<Link href="#">
+				<Link href="https://www.instagram.com/obis_eth/">
 					<svg
 						width="24"
 						height="25"
@@ -27,7 +27,7 @@ export function Footer() {
 						/>
 					</svg>
 				</Link>
-				<Link href="#">
+				<Link href="https://ch.linkedin.com/company/obiseth">
 					<svg
 						xmlns="http://www.w3.org/2000/svg"
 						width="24"
