@@ -1,0 +1,24 @@
+.hero {
+	padding: 2rem 0;
+	display: flex;
+	flex-direction: column;
+	gap: 2rem;
+	width: 75%;
+}
+
+.title {
+	text-align: center;
+}
+
+.subtitle {
+	text-align: center;
+	font-size: 1.25rem;
+	line-height: 150%;
+}
+
+@media screen and (min-width: 800px) {
+	.hero {
+		padding: 2rem;
+		align-items: center;
+	}
+}

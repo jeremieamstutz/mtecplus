@@ -1,0 +1,22 @@
+.hero {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 1rem;
+	padding: 2rem;
+}
+
+.image {
+	border: 1px solid var(--border-color);
+	border-radius: var(--border-radius);
+}
+
+.body {
+	font-size: 1.125rem;
+	line-height: 150%;
+	max-width: 800px;
+}
+
+.body p {
+	margin-top: 1rem;
+}
