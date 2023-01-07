@@ -5,10 +5,16 @@ import { members } from 'lib/constants/members'
 
 import s from 'styles/pages/about.module.css'
 import { Button } from 'components/ui'
+import Head from 'next/head'
 
 export default function About() {
 	return (
 		<>
+			<Head>
+				<style>
+					{':root { --background-color: #e9edc9 !important; }'}
+				</style>
+			</Head>
 			<Hero
 				title="About"
 				subtitle={

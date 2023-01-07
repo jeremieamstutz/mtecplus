@@ -2,10 +2,16 @@ import { Event, Hero } from 'components/elements'
 import Link from 'next/link'
 
 import { events } from 'lib/constants/events'
+import Head from 'next/head'
 
 export default function About() {
 	return (
 		<>
+			<Head>
+				<style>
+					{':root { --background-color: #fefae0 !important; }'}
+				</style>
+			</Head>
 			<Hero title="Events" />
 			<div
 				style={{

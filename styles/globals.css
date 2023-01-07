@@ -35,7 +35,6 @@ body {
 
 a {
 	color: var(--text-color);
-	/* text-decoration: none; */
 }
 
 button {
@@ -46,7 +45,7 @@ button {
 }
 
 image {
-	background: #eee;
+	background: var(--foreground-color);
 }
 
 h1 {
