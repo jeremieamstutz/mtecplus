@@ -6,15 +6,21 @@
 	padding: 2rem;
 }
 
+.subtitle {
+	font-size: 1.125rem;
+	max-width: 640px;
+}
+
 .image {
 	border: 1px solid var(--border-color);
 	border-radius: var(--border-radius);
+	margin-bottom: 1rem;
 }
 
 .body {
 	font-size: 1.125rem;
 	line-height: 150%;
-	max-width: 800px;
+	max-width: 640px;
 }
 
 .body p {
