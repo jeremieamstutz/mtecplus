@@ -1,0 +1,23 @@
+.accordion {
+	width: 100%;
+	display: grid;
+	grid-template-columns: 3rem 1fr;
+	gap: 0.5rem 0;
+	max-width: 800px;
+}
+
+.title {
+	font-size: 1.5rem;
+	font-weight: 700;
+	flex: 1;
+	line-height: 150%;
+	user-select: none;
+	cursor: pointer;
+}
+
+.content {
+	overflow: hidden;
+	font-size: 1.125rem;
+	line-height: 150%;
+	grid-column-start: 2;
+}
