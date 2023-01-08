@@ -1,5 +1,4 @@
 import { Event, Hero } from 'components/elements'
-import Link from 'next/link'
 
 import { events } from 'lib/constants/events'
 import Head from 'next/head'
@@ -23,13 +22,7 @@ export default function About() {
 				}}
 			>
 				{events.map((event, idx) => (
-					<Link
-						href={`/events/${event.slug}`}
-						key={idx}
-						style={{ textDecoration: 'none' }}
-					>
-						<Event event={event} />
-					</Link>
+					<Event event={event} key={idx} />
 				))}
 			</div>
 		</>

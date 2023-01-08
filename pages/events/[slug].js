@@ -1,7 +1,10 @@
+import Head from 'next/head'
 import { useRouter } from 'next/router'
 import Image from 'next/image'
 
 import { events } from 'lib/constants/events'
+
+import { Hero } from 'components/elements'
 
 import s from 'styles/pages/event.module.css'
 
@@ -16,13 +19,15 @@ export default function Event() {
 
 	return (
 		<>
-			<div className={s.hero}>
-				<div className={s.date}>
+			<Head>
+				<style>
+					{':root { --background-color: #fefae0 !important; }'}
+				</style>
+			</Head>
+			<Hero title={title} subtitle={headline} />
+			{/* <div className={s.date}>
 					{new Date(date).toLocaleDateString()}
-				</div>
-				<h1 className={s.title}>{title}</h1>
-				<div className={s.headline}>{headline}</div>
-			</div>
+				</div> */}
 			<Image
 				className={s.image}
 				alt={title}
