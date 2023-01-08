@@ -3,10 +3,13 @@
 	border: 1px solid var(--border-color);
 	border-radius: var(--border-radius);
 	overflow: hidden;
+	cursor: pointer;
+	text-decoration: none;
 }
 
 .card:hover {
 	box-shadow: 3px 3px 0 #000;
+	transform: scale(101%);
 }
 
 .image {
@@ -19,6 +22,7 @@
 	height: auto;
 	aspect-ratio: 1/1;
 	object-fit: cover;
+	border-radius: 0;
 }
 
 .details {
