@@ -1,0 +1,23 @@
+.marquee {
+	margin-top: 1rem;
+	max-width: 640px;
+	border: 1px solid var(--border-color);
+	border-radius: var(--border-radius);
+	background: var(--foreground-color);
+}
+
+.logo {
+	display: block;
+	flex-shrink: 0;
+	width: 80px;
+	height: auto;
+	object-fit: contain;
+	aspect-ratio: 1/1;
+	border-radius: 0.5rem;
+	border: none;
+	border-radius: 0;
+	margin: 0 1.5rem;
+}
+
+@media screen and (min-width: 800px) {
+}
