@@ -1,4 +1,5 @@
 import { Layout } from 'components/layout'
+import { Meta } from 'components/layout/meta'
 import Script from 'next/script'
 
 import '../styles/globals.css'
@@ -22,6 +23,7 @@ export default function App({ Component, pageProps }) {
 					</Script>
 				</>
 			)}
+			<Meta />
 			<Layout>
 				<Component {...pageProps} />
 			</Layout>
