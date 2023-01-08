@@ -4,6 +4,7 @@ import s from './accordion.module.css'
 
 export function Accordion({ header, content }) {
 	const [open, setOpen] = useState()
+
 	const contentRef = useRef()
 
 	useEffect(() => {
@@ -14,7 +15,7 @@ export function Accordion({ header, content }) {
 
 	return (
 		<div className={s.accordion}>
-			<div className={s.title} onClick={() => setOpen((prev) => !prev)}>
+			<div className={s.icon} onClick={() => setOpen((prev) => !prev)}>
 				{open ? '-' : '+'}
 			</div>
 			<h2 className={s.title} onClick={() => setOpen((prev) => !prev)}>

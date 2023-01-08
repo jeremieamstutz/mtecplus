@@ -1,5 +1,5 @@
 import { Hero } from 'components/elements'
-import { Accordion } from 'components/ui/accordion'
+import { Accordion } from 'components/ui'
 import Head from 'next/head'
 
 import s from 'styles/pages/info.module.css'
@@ -26,7 +26,7 @@ export default function Info() {
 					{':root { --background-color: #e8d9ca !important; }'}
 				</style>
 			</Head>
-			<Hero title="Info" />
+			<Hero title="Frequently Asked Questions" />
 			<div className={s.faq}>
 				{faq.map(({ question, answer }, idx) => (
 					<Accordion header={question} content={answer} key={idx} />

@@ -2,8 +2,16 @@
 	width: 100%;
 	display: grid;
 	grid-template-columns: 3rem 1fr;
-	gap: 0.5rem 0;
 	max-width: 800px;
+	align-items: center;
+}
+
+.icon {
+	font-size: 2.5rem;
+	font-weight: 600;
+	user-select: none;
+	line-height: 150%;
+	cursor: pointer;
 }
 
 .title {
