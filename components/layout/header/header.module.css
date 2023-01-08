@@ -113,6 +113,10 @@
 		display: flex;
 	}
 
+	.menu.open {
+		height: auto;
+	}
+
 	.nav {
 		display: flex;
 		padding: 0 1rem;
