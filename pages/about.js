@@ -1,13 +1,15 @@
 import { Hero, Member } from 'components/elements'
 import Link from 'next/link'
 
-import { members } from 'lib/constants/members'
+import { students } from 'lib/constants/students'
 
 import s from 'styles/pages/about.module.css'
 import { Button } from 'components/ui'
 import Head from 'next/head'
 
 export default function About() {
+	const members = students.filter((student) => !!student.roles)
+
 	return (
 		<>
 			<Head>
@@ -33,7 +35,7 @@ export default function About() {
 					display: 'grid',
 					gap: '1.5rem',
 					gridTemplateColumns:
-						'repeat(auto-fit, minmax(15rem, 15fr))',
+						'repeat(auto-fill, minmax(15rem, 15fr))',
 				}}
 			>
 				{members.map((member, idx) => (
