@@ -8,22 +8,62 @@
 	align-items: stretch;
 	border-top: 1px solid var(--border-color);
 	border-bottom: 1px solid var(--border-color);
+	flex-wrap: wrap;
+}
+
+.main {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
 }
 
 .logo {
 	font-weight: 700;
 	font-size: 1.5rem;
-	padding: 1rem 2rem;
+	padding: 1rem;
 	text-decoration: none;
 }
 
-.nav {
-	display: none;
+.plus {
+	color: red;
+}
+
+.button {
+	color: var(--text-color);
+	display: flex;
 	align-items: center;
-	gap: 1rem;
+	justify-content: center;
+	padding: 1rem 1.5rem;
+}
+
+.menu {
+	width: 100%;
+	overflow: scroll;
+	height: 0px;
+}
+
+.menu::-webkit-scrollbar {
+	display: none;
+}
+
+.menu.open {
+	height: 106px;
+}
+
+.nav {
+	display: flex;
+	overflow: scroll;
+	gap: 0.25rem;
+	padding: 0 1rem 1rem;
+}
+
+.nav::-webkit-scrollbar {
+	display: none;
 }
 
 .link {
+	display: block;
 	font-weight: 500;
 	border: 1px solid transparent;
 	border-radius: 2rem;
@@ -31,36 +71,72 @@
 	text-decoration: none;
 }
 
-.link.active,
-.link:hover {
+.link.active {
 	background: var(--foreground-color);
 	border: 1px solid var(--border-color);
 }
 
 .login {
-	display: none;
-	width: 10rem;
-	border-left: 1px solid var(--border-color);
+	display: block;
+	width: 100%;
+	text-align: center;
 	padding: 1rem 2rem;
 	text-decoration: none;
+	border-top: 1px solid var(--border-color);
 }
 
-.logo:hover,
 .login:hover {
 	background: var(--foreground-color);
 }
 
 @media screen and (min-width: 800px) {
+	.header {
+		flex-wrap: nowrap;
+		gap: 0;
+	}
+
+	.main {
+		width: auto;
+	}
+
 	.logo {
+		padding: 1rem 2rem;
 		border-right: 1px solid var(--border-color);
 	}
-	.nav {
+
+	.button {
+		display: none;
+	}
+
+	.menu {
+		height: auto;
 		display: flex;
 	}
 
+	.nav {
+		display: flex;
+		padding: 0 1rem;
+		margin: 0 auto;
+		align-items: center;
+		gap: 0.5rem;
+	}
+
+	.link:hover {
+		background: var(--foreground-color);
+		border: 1px solid var(--border-color);
+	}
+
 	.login {
+		width: 10rem;
 		display: flex;
 		justify-content: center;
 		align-items: center;
+		border-top: none;
+		border-left: 1px solid var(--border-color);
+	}
+
+	.logo:hover,
+	.login:hover {
+		background: var(--foreground-color);
 	}
 }
