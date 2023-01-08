@@ -42,8 +42,10 @@ export default function Student() {
 				<div className={s.info}>
 					<h1 className={s.name}>{`${first_name} ${last_name}`}</h1>
 					<div className={s.roles}>
-						{roles.map(({ name }) => (
-							<div className={s.role}>{name}</div>
+						{roles.map(({ name }, idx) => (
+							<div className={s.role} key={idx}>
+								{name}
+							</div>
 						))}
 					</div>
 					<div className={s.education}>{education}</div>
