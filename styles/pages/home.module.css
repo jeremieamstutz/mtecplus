@@ -4,6 +4,7 @@
 	border: 1px solid var(--border-color);
 	border-radius: var(--border-radius);
 	background: var(--foreground-color);
+	z-index: 1;
 }
 
 .logo {
