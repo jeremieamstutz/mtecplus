@@ -1,9 +1,11 @@
 import Image from 'next/image'
+import Link from 'next/link'
+
 import s from './event.module.css'
 
-export function Event({ event: { date, title, headline, image } }) {
+export function Event({ event: { slug, date, title, headline, image } }) {
 	return (
-		<div className={s.card}>
+		<Link className={s.card} href={`/events/${slug}`}>
 			<Image
 				className={s.image}
 				alt={title}
@@ -18,6 +20,6 @@ export function Event({ event: { date, title, headline, image } }) {
 				<h3 className={s.title}>{title}</h3>
 				<div className={s.headline}>{headline}</div>
 			</div>
-		</div>
+		</Link>
 	)
 }

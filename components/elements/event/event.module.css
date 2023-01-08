@@ -4,10 +4,16 @@
 	overflow: hidden;
 	border-radius: var(--border-radius);
 	max-width: 25rem;
+	text-decoration: none;
 }
 
 .card:hover {
+	transform: scale(101%);
 	box-shadow: 3px 3px 0 #000;
+}
+
+.card:active {
+	box-shadow: none;
 }
 
 .image {
@@ -18,6 +24,7 @@
 	height: auto;
 	aspect-ratio: 4/3;
 	object-fit: cover;
+	border-radius: 0;
 }
 
 .details {
@@ -28,5 +35,5 @@
 }
 
 .title {
-	font-size: 1.125rem;
+	font-size: 1.25rem;
 }
