@@ -1,4 +1,5 @@
 import { Hero } from 'components/elements'
+import { Meta } from 'components/layout'
 import { Button, Input } from 'components/ui'
 
 import s from 'styles/pages/login.module.css'
@@ -6,6 +7,7 @@ import s from 'styles/pages/login.module.css'
 export default function Login() {
 	return (
 		<>
+			<Meta title="Login" />
 			<Hero title="Login" subtitle="Please use your ETH email address" />
 			<div
 				style={{

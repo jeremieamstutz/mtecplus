@@ -1,3 +1,4 @@
+import { Meta } from 'components/layout'
 import { students } from 'lib/constants/students'
 import Head from 'next/head'
 import Image from 'next/image'
@@ -31,6 +32,7 @@ export default function Student() {
 					{':root { --background-color: #ecd7d1 !important; }'}
 				</style>
 			</Head>
+			<Meta title={`${first_name} ${last_name}`} />
 			<section className={s.header}>
 				<Image
 					className={s.picture}

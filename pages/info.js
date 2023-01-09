@@ -1,4 +1,5 @@
 import { Hero } from 'components/elements'
+import { Meta } from 'components/layout'
 import { Accordion } from 'components/ui'
 import Head from 'next/head'
 
@@ -21,6 +22,7 @@ const faq = [
 export default function Info() {
 	return (
 		<>
+			<Meta title="Information" />
 			<Head>
 				<style>
 					{':root { --background-color: #e8d9ca !important; }'}

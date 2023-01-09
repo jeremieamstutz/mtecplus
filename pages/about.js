@@ -6,6 +6,7 @@ import { students } from 'lib/constants/students'
 import s from 'styles/pages/about.module.css'
 import { Button } from 'components/ui'
 import Head from 'next/head'
+import { Meta } from 'components/layout'
 
 export default function About() {
 	const members = students.filter((student) => !!student.roles)
@@ -17,6 +18,7 @@ export default function About() {
 					{':root { --background-color: #e9edc9 !important; }'}
 				</style>
 			</Head>
+			<Meta title="About" />
 			<Hero
 				title="About"
 				subtitle={

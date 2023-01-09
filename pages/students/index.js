@@ -7,6 +7,7 @@ import { Hero, Member } from 'components/elements'
 import s from 'styles/pages/students.module.css'
 import { Input } from 'components/ui'
 import { useState } from 'react'
+import { Meta } from 'components/layout'
 
 export default function Students() {
 	const [query, setQuery] = useState('')
@@ -25,7 +26,8 @@ export default function Students() {
 					{':root { --background-color: #ecd7d1 !important; }'}
 				</style>
 			</Head>
-			<Hero title="Student Directory" />
+			<Meta title="Directory" />
+			<Hero title="Directory" />
 			<Input
 				type="search"
 				placeholder="Search..."

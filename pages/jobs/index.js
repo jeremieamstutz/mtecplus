@@ -1,10 +1,10 @@
 import { useState } from 'react'
 import Head from 'next/head'
-import Image from 'next/image'
 import Link from 'next/link'
 
 import { jobs } from 'lib/constants/jobs'
 
+import { Meta } from 'components/layout'
 import { Hero, Job } from 'components/elements'
 import { Input } from 'components/ui'
 
@@ -25,6 +25,7 @@ export default function Jobs() {
 					{':root { --background-color: #ecd7d1 !important; }'}
 				</style>
 			</Head>
+			<Meta title="Jobs" />
 			<Hero
 				title="Jobs"
 				subtitle={

@@ -1,4 +1,5 @@
 import { Hero } from 'components/elements'
+import { Meta } from 'components/layout'
 
 import { jobs } from 'lib/constants/jobs'
 import { useRouter } from 'next/router'
@@ -13,6 +14,7 @@ export default function Job() {
 
 	return (
 		<>
+			<Meta title={title} />
 			<Hero title={title} />
 		</>
 	)

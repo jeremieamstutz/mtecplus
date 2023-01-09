@@ -1,7 +1,9 @@
+import Head from 'next/head'
+
+import { Meta } from 'components/layout'
 import { Event, Hero } from 'components/elements'
 
 import { events } from 'lib/constants/events'
-import Head from 'next/head'
 
 export default function About() {
 	return (
@@ -11,6 +13,7 @@ export default function About() {
 					{':root { --background-color: #fefae0 !important; }'}
 				</style>
 			</Head>
+			<Meta title="Events" />
 			<Hero title="Events" />
 			<div
 				style={{
