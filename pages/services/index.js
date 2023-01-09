@@ -34,7 +34,7 @@ export default function Services() {
 			<Hero title="Services" />
 			<div className={s.services}>
 				{services.map(({ icon, name, description, link }) => (
-					<Link className={s.service} href={link}>
+					<Link className={s.service} href={link} key={name}>
 						{icon}
 						<h3>{name}</h3>
 						<p>{description}</p>
