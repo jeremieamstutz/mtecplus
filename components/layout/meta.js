@@ -1,10 +1,10 @@
 import Head from 'next/head'
 
-export function Meta({
-	title = 'MTEC+ | MTEC Student Organisation',
-	description = 'Organisation of Students in Management, Technology and Economics at ETHZ',
-	image = '/og.png',
-}) {
+export function Meta({ title, description, image }) {
+	title = title ? `${title} ┃ MTEC+` : 'MTEC+ ┃ MTEC Student Organisation'
+	description == description ||
+		'Organisation of Students in Management, Technology and Economics at ETHZ'
+	image = image || '/og/default.png'
 	return (
 		<Head>
 			<title>{title}</title>
@@ -21,7 +21,7 @@ export function Meta({
 			<meta name="twitter:image" content={image} />
 
 			<meta charSet="utf-8" />
-			<link rel="manifest" href="/site.webmanifest" />
+			{/* <link rel="manifest" href="/site.webmanifest" /> */}
 			<link
 				rel="mask-icon"
 				href="/safari-pinned-tab.svg"
@@ -33,6 +33,7 @@ export function Meta({
 				name="viewport"
 				content="width=device-width, initial-scale=1"
 			/>
+			<link rel="icon" href="/icon.svg" type="image/svg+xml" />
 			<link
 				rel="apple-touch-icon"
 				sizes="180x180"
