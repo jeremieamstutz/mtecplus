@@ -1,0 +1,30 @@
+.container {
+	display: flex;
+	justify-content: center;
+	width: 3rem;
+}
+
+.dot {
+	width: 0.5rem;
+	height: 0.5rem;
+	border-radius: 50%;
+	background-color: #fff;
+	box-shadow: -1rem 0 #fff, 1rem 0 #fff;
+	position: relative;
+	animation: flash 500ms ease-out infinite alternate;
+}
+
+@keyframes flash {
+	0% {
+		background-color: #fff1;
+		box-shadow: -1rem 0 #fff, 1rem 0 #fff1;
+	}
+	50% {
+		background-color: #fff;
+		box-shadow: -1rem 0 #fff1, 1rem 0 #fff1;
+	}
+	100% {
+		background-color: #fff1;
+		box-shadow: -1rem 0 #fff1, 1rem 0 #fff;
+	}
+}
