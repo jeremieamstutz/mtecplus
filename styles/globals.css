@@ -65,6 +65,17 @@ p {
 	font-size: 1.25rem;
 }
 
+input,
+select,
+textarea {
+	border: none;
+	color: var(--text-color);
+	font-family: var(--font-family);
+	outline: none;
+	font-size: 1.125rem;
+	line-height: 150%;
+}
+
 @media screen and (min-width: 800px) {
 	h1 {
 		font-size: 4rem;
