@@ -23,6 +23,7 @@ export default function App({ Component, pageProps }) {
 					</Script>
 				</>
 			)}
+			<Meta />
 			<Layout>
 				<Component {...pageProps} />
 			</Layout>
