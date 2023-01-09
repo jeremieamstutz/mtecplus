@@ -10,6 +10,7 @@ export function Button({
 	variant,
 	loading,
 	disabled,
+	className,
 	...props
 }) {
 	variant = variant || 'primary'
@@ -27,7 +28,7 @@ export function Button({
 					[s.naked]: variant === 'naked',
 					[s.primary]: variant === 'primary',
 				},
-				props.className,
+				className,
 			)}
 			href={href}
 			disabled={disabled || loading}

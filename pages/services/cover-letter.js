@@ -282,8 +282,8 @@ export default function CoverLetter() {
 					</div>
 					<p>
 						Generating this text takes time (around <i>20s</i>) and
-						is very expensive. If you enjoy this service, please
-						consider{' '}
+						is <i>very expensive</i>. If you enjoy this service,
+						please consider{' '}
 						<Link
 							href="https://buy.stripe.com/14k5lX0QW9nl38Q288"
 							target="_blank"
