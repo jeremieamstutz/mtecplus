@@ -76,7 +76,11 @@ export default function CoverLetter() {
 
 	return (
 		<>
-			<Meta title="AI Cover letter" image="/og/cover-letter.png" />
+			<Meta
+				title="AI Cover letter"
+				description="Let an AI write your cover letter"
+				image="/og/cover-letter.png"
+			/>
 			<Hero
 				title="Cover letter"
 				subtitle="Let an AI write your cover letter"
