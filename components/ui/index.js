@@ -1,3 +1,5 @@
 export { Button } from './button'
 export { Accordion } from './accordion'
 export { Input } from './input'
+export { Textarea } from './textarea'
+export { Anchor } from './anchor'
