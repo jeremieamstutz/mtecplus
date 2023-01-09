@@ -1,10 +1,22 @@
 .button {
+	font-weight: 500;
+	font-size: 1.125rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.naked {
+	color: var(--text-color);
+	text-decoration: underline;
+}
+
+.primary {
+	height: 3rem;
+	border-radius: 0.5rem;
+	text-decoration: none;
+	padding: 1rem 2rem;
 	color: var(--foreground-color);
 	background: var(--text-color);
 	border: 1px solid var(--border-color);
-	font-weight: 500;
-	padding: 1rem 2rem;
-	border-radius: 0.5rem;
-	font-size: 1.125rem;
-	text-decoration: none;
 }

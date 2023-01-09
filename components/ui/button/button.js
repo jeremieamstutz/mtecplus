@@ -1,15 +1,39 @@
 import cn from 'clsx'
 import Link from 'next/link'
+import { Loader } from 'components/ui'
 
 import s from './button.module.css'
 
-export function Button({ children, href, ...props }) {
+export function Button({
+	children,
+	href,
+	variant,
+	loading,
+	disabled,
+	...props
+}) {
+	variant = variant || 'primary'
+
+	let Component = 'button'
 	if (href) {
-		return (
-			<Link className={cn(s.button, props.className)} href={href}>
-				{children}
-			</Link>
-		)
+		Component = Link
 	}
-	return <button className={cn(s.button, props.className)}>{children}</button>
+
+	return (
+		<Component
+			className={cn(
+				s.button,
+				{
+					[s.naked]: variant === 'naked',
+					[s.primary]: variant === 'primary',
+				},
+				props.className,
+			)}
+			href={href}
+			disabled={disabled || loading}
+			{...props}
+		>
+			{loading ? <Loader /> : children}
+		</Component>
+	)
 }

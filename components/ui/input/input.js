@@ -8,7 +8,11 @@ export function Input({ name, label, ...props }) {
 			<label className={s.label} htmlFor={name}>
 				{label}
 			</label>
-			<input className={cn(s.input, props.className)} {...props} />
+			<input
+				className={cn(s.input, props.className)}
+				name={name}
+				{...props}
+			/>
 		</div>
 	)
 }
