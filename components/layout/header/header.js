@@ -3,7 +3,7 @@ import Link from 'next/link'
 import { useRouter } from 'next/router'
 import { useEffect, useRef, useState } from 'react'
 
-import useClickOutside from 'lib/hooks/useClickOutside'
+import { useClickOutside } from 'lib/hooks'
 
 import s from './header.module.css'
 
@@ -90,7 +90,7 @@ export function Header() {
 					<Link
 						href="/services"
 						className={cn(s.link, {
-							[s.active]: router.pathname == '/services',
+							[s.active]: router.pathname.startsWith('/services'),
 						})}
 					>
 						Services
