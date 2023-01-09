@@ -1,0 +1,49 @@
+.backdrop {
+	position: fixed;
+	inset: 0;
+	z-index: 10;
+	background: #000000;
+	opacity: 0.5;
+	cursor: zoom-out;
+}
+
+.container {
+	pointer-events: none;
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	display: flex;
+	justify-content: center;
+	z-index: 10;
+	max-height: 100vh;
+	max-height: 100dvh;
+}
+
+.modal {
+	z-index: 100;
+	pointer-events: all;
+	display: flex;
+	flex-direction: column;
+	background: #ffffff;
+	border: 1px solid var(--border-color);
+	width: 100%;
+	max-width: 60rem;
+	max-height: 100%;
+	overflow: hidden;
+	padding-top: env(safe-area-inset-top);
+	padding-bottom: env(safe-area-inset-bottom);
+}
+
+@media screen and (min-width: 800px) {
+	.container {
+		padding: 2rem;
+		align-items: center;
+		inset: 0;
+	}
+
+	.modal {
+		border-radius: 1rem;
+		max-width: 50rem;
+	}
+}
