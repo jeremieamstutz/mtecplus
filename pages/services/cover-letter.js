@@ -322,7 +322,7 @@ export default function CoverLetter() {
 								style={{
 									flex: 1,
 									display: 'block',
-									padding: '1.5rem 1rem',
+									padding: '1.5rem',
 									width: '100%',
 									// background: 'red',
 									resize: 'none',
