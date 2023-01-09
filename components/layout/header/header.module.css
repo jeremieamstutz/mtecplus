@@ -9,6 +9,7 @@
 	border-top: 1px solid var(--border-color);
 	border-bottom: 1px solid var(--border-color);
 	flex-wrap: wrap;
+	user-select: none;
 }
 
 .main {

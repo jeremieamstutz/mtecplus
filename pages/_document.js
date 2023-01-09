@@ -4,8 +4,6 @@ export default function Document() {
 	return (
 		<Html lang="en">
 			<Head>
-				<meta charSet="utf-8" />
-				<meta name="theme-color" content="#f7f1eb" />
 				<link rel="icon" href="/favicon.svg" type="image/svg+xml" />
 				<link rel="preconnect" href="https://fonts.googleapis.com" />
 				<link

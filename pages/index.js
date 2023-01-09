@@ -10,47 +10,47 @@ import s from 'styles/pages/home.module.css'
 const sponsors = [
 	{
 		name: 'KPMG',
-		logo: 'https://logo.clearbit.com/home.kpmg?s=256&greyscale="true',
+		logo: 'https://logo.clearbit.com/home.kpmg?s=256',
 		website: 'https://home.kpmg',
 	},
 	{
 		name: 'PwC',
-		logo: 'https://logo.clearbit.com/pwc.ch?s=256&greyscale="true',
+		logo: 'https://logo.clearbit.com/pwc.ch?s=256',
 		website: 'https://pwc.ch',
 	},
 	{
 		name: 'ETHZ',
-		logo: 'https://logo.clearbit.com/ethz.ch?s=256&greyscale="true',
+		logo: 'https://logo.clearbit.com/ethz.ch?s=256',
 		website: 'https://ethz.ch',
 	},
 	{
 		name: 'KPMG',
-		logo: 'https://logo.clearbit.com/home.kpmg?s=256&greyscale="true',
+		logo: 'https://logo.clearbit.com/home.kpmg?s=256',
 		website: 'https://home.kpmg',
 	},
 	{
 		name: 'PwC',
-		logo: 'https://logo.clearbit.com/pwc.ch?s=256&greyscale="true',
+		logo: 'https://logo.clearbit.com/pwc.ch?s=256',
 		website: 'https://pwc.ch',
 	},
 	{
 		name: 'ETHZ',
-		logo: 'https://logo.clearbit.com/ethz.ch?s=256&greyscale="true',
+		logo: 'https://logo.clearbit.com/ethz.ch?s=256',
 		website: 'https://ethz.ch',
 	},
 	{
 		name: 'KPMG',
-		logo: 'https://logo.clearbit.com/home.kpmg?s=256&greyscale="true',
+		logo: 'https://logo.clearbit.com/home.kpmg?s=256',
 		website: 'https://home.kpmg',
 	},
 	{
 		name: 'PwC',
-		logo: 'https://logo.clearbit.com/pwc.ch?s=256&greyscale="true',
+		logo: 'https://logo.clearbit.com/pwc.ch?s=256',
 		website: 'https://pwc.ch',
 	},
 	{
 		name: 'ETHZ',
-		logo: 'https://logo.clearbit.com/ethz.ch?s=256&greyscale="true',
+		logo: 'https://logo.clearbit.com/ethz.ch?s=256',
 		website: 'https://ethz.ch',
 	},
 ]

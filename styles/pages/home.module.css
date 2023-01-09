@@ -1,6 +1,6 @@
 .marquee {
 	margin-top: 1rem;
-	max-width: 640px;
+	max-width: 800px;
 	border: 1px solid var(--border-color);
 	border-radius: var(--border-radius);
 	background: var(--foreground-color);
