@@ -1,5 +1,7 @@
-import { Hero } from 'components/elements'
 import Head from 'next/head'
+
+import { Meta } from 'components/layout'
+import { Hero } from 'components/elements'
 
 export default function Services() {
 	return (
@@ -9,6 +11,7 @@ export default function Services() {
 					{':root { --background-color: #faedcd !important; }'}
 				</style>
 			</Head>
+			<Meta title="Services" />
 			<Hero title="Services" />
 		</>
 	)
