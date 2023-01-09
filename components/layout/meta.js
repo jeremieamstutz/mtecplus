@@ -2,7 +2,8 @@ import Head from 'next/head'
 
 export function Meta({ title, description, image }) {
 	title = title ? `${title} ┃ MTEC+` : 'MTEC+ ┃ MTEC Student Organisation'
-	description == description ||
+	description =
+		description ||
 		'Organisation of Students in Management, Technology and Economics at ETHZ'
 	image = image || '/og/default.png'
 	return (
