@@ -69,6 +69,7 @@ input,
 select,
 textarea {
 	border: none;
+	background: var(--foreground-color);
 	color: var(--text-color);
 	font-family: var(--font-family);
 	outline: none;

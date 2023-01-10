@@ -1,3 +1,4 @@
+import cn from 'clsx'
 import { useEffect, useRef, useState } from 'react'
 
 import s from './accordion.module.css'
@@ -14,7 +15,7 @@ export function Accordion({ header, content }) {
 	}, [contentRef, open])
 
 	return (
-		<div className={s.accordion}>
+		<div className={cn(s.accordion, { [s.open]: open })}>
 			<div className={s.icon} onClick={() => setOpen((prev) => !prev)}>
 				{open ? '-' : '+'}
 			</div>

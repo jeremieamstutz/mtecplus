@@ -1,5 +1,7 @@
 .group {
 	width: 100%;
+	flex: 1;
+	min-width: 15rem;
 	display: flex;
 	flex-direction: column;
 	gap: 0.5rem;

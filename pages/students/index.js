@@ -23,7 +23,7 @@ export default function Students() {
 		<>
 			<Head>
 				<style>
-					{':root { --background-color: #ecd7d1 !important; }'}
+					{':root { --background-color: #e6d1ec !important; }'}
 				</style>
 			</Head>
 			<Meta title="Directory" />
