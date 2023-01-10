@@ -9,15 +9,9 @@ import { Hero, Job } from 'components/elements'
 import { Input } from 'components/ui'
 
 import s from 'styles/pages/jobs.module.css'
+import { Formik } from 'formik'
 
 export default function Jobs() {
-	const [query, setQuery] = useState('')
-
-	const filteredJobs = jobs.filter(
-		(job) =>
-			job.title.toLowerCase().indexOf(query.toLowerCase()) > -1 ||
-			job.company.toLowerCase().indexOf(query.toLowerCase()) > -1,
-	)
 	return (
 		<>
 			<Head>
@@ -37,17 +31,37 @@ export default function Jobs() {
 					</>
 				}
 			/>
-			<Input
-				type="search"
-				placeholder="Search..."
-				value={query}
-				onChange={(event) => setQuery(event.target.value)}
-			/>
-			<div className={s.jobs}>
-				{filteredJobs.map((job, idx) => (
-					<Job job={job} key={idx} />
-				))}
-			</div>
+			<Formik initialValues={{ query: '' }}>
+				{({ values }) => (
+					<>
+						<Input
+							name="query"
+							type="search"
+							placeholder="Search..."
+						/>
+
+						<div className={s.jobs}>
+							{jobs
+								.filter(
+									(job) =>
+										job.title
+											.toLowerCase()
+											.indexOf(
+												values.query.toLowerCase(),
+											) > -1 ||
+										job.company
+											.toLowerCase()
+											.indexOf(
+												values.query.toLowerCase(),
+											) > -1,
+								)
+								.map((job, idx) => (
+									<Job job={job} key={idx} />
+								))}
+						</div>
+					</>
+				)}
+			</Formik>
 		</>
 	)
 }
