@@ -1,6 +1,5 @@
 .group {
 	width: 100%;
-	flex: 1;
 	min-width: 15rem;
 	display: flex;
 	flex-direction: column;
@@ -12,10 +11,19 @@
 	font-weight: 600;
 }
 
+.control {
+	display: flex;
+}
+
 .input {
+	flex: 1;
 	display: flex;
 	align-items: center;
 	padding: 0.75rem 1rem;
 	border-radius: 0.5rem;
 	border: 1px solid var(--border-color);
+}
+
+.error {
+	color: red;
 }

@@ -1,5 +1,6 @@
 .group {
 	width: 100%;
+	min-width: 15rem;
 	display: flex;
 	flex-direction: column;
 	gap: 0.5rem;
@@ -10,11 +11,20 @@
 	font-weight: 600;
 }
 
+.control {
+	display: flex;
+}
+
 .textarea {
+	flex: 1;
 	display: flex;
 	align-items: center;
 	padding: 0.75rem 1rem;
 	border-radius: 0.5rem;
 	border: 1px solid var(--border-color);
 	resize: none;
+}
+
+.error {
+	color: red;
 }
