@@ -1,5 +1,5 @@
 import cn from 'clsx'
-import { ChevronUpDown } from 'components/icons/chevron-up-down'
+import { ChevronUpDownIcon } from 'components/icons'
 
 import s from './select.module.css'
 
@@ -17,7 +17,7 @@ export function Select({ name, label, children, ...props }) {
 				>
 					{children}
 				</select>
-				<ChevronUpDown className={s.chevron} />
+				<ChevronUpDownIcon className={s.chevron} />
 			</div>
 		</div>
 	)
