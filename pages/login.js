@@ -8,7 +8,8 @@ export default function Login() {
 	return (
 		<>
 			<Meta title="Login" />
-			<Hero title="Login" subtitle="Please use your ETH email address" />
+			{/* <Hero title="Login" subtitle="Please use your ETH email address" /> */}
+			<Hero title="Login" subtitle="(Doesn't work at the moment)" />
 			<div
 				style={{
 					width: '100%',
