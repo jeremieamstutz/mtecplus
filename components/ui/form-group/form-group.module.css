@@ -4,3 +4,7 @@
 	gap: 1rem;
 	flex-wrap: wrap;
 }
+
+.group > * {
+	flex: 1;
+}
