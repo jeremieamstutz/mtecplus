@@ -11,7 +11,7 @@ export default function Login() {
 			<Meta title="Login" />
 			{/* <Hero title="Login" subtitle="Please use your ETH email address" /> */}
 			<Hero title="Login" subtitle="(Doesn't work at the moment)" />
-			<Formik>
+			<Formik initialValues={{ email: '', password: '' }}>
 				<Form
 					style={{
 						width: '100%',
