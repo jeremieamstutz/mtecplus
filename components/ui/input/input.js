@@ -3,7 +3,7 @@ import { useField } from 'formik'
 
 import s from './input.module.css'
 
-export function Input({ name, label, ...props }) {
+export function Input({ name, label, max, ...props }) {
 	const [field, meta] = useField(name)
 
 	return (
@@ -17,6 +17,11 @@ export function Input({ name, label, ...props }) {
 					{...props}
 				/>
 			</div>
+			{max && (
+				<div className={s.help}>
+					{field.value.length}/{max}
+				</div>
+			)}
 			{meta.touched && meta.error && (
 				<div className={s.error}>{meta.error}</div>
 			)}

@@ -63,19 +63,59 @@ export default function CoverLetter() {
 						creativity: '0.75',
 					}}
 					validationSchema={Yup.object({
-						name: Yup.string().required().min(5).max(48),
-						summary: Yup.string().max(256),
-						hard_skills: Yup.string().max(48),
-						soft_skills: Yup.string().max(48),
-						experience: Yup.string().max(256),
-						education: Yup.string().max(256),
-						projects: Yup.string().max(256),
-						title: Yup.string().required().min(5).max(48),
-						company: Yup.string().required().min(5).max(48),
-						description: Yup.string().required().min(50).max(512),
-						motivation: Yup.string().max(256),
-						language: Yup.string().required(),
-						creativity: Yup.number().required(),
+						name: Yup.string()
+							.required('Your name is required')
+							.min(5, 'Please write at least 5 characters')
+							.max(48, 'Please write less than 48 characters'),
+						summary: Yup.string().max(
+							512,
+							'Please write less than 512 characters',
+						),
+						hard_skills: Yup.string().max(
+							128,
+							'Please write less than 128 characters',
+						),
+						soft_skills: Yup.string().max(
+							128,
+							'Please write less than 128 characters',
+						),
+						experience: Yup.string().max(
+							1024,
+							'Please write less than 1024 characters',
+						),
+						education: Yup.string().max(
+							1024,
+							'Please write less than 1024 characters',
+						),
+						projects: Yup.string().max(
+							1024,
+							'Please write less than 1024 characters',
+						),
+						title: Yup.string()
+							.required('The job title is required')
+							.min(5, 'Please write at least 5 characters')
+							.max(64, 'Please write less than 64 characters'),
+						company: Yup.string()
+							.required('The company name is required')
+							.min(5, 'Please write at least 5 characters')
+							.max(48, 'Please write less than 48 characters'),
+						description: Yup.string()
+							.required('The job description is required')
+							.min(50, 'Please write at least 50 characters')
+							.max(
+								2048,
+								'Please write less than 2048 characters',
+							),
+						motivation: Yup.string().max(
+							1024,
+							'Please write less than 1024 characters',
+						),
+						language: Yup.string().required(
+							'A language is required',
+						),
+						creativity: Yup.number().required(
+							'A level of creativity is required',
+						),
 					})}
 					onSubmit={async (values) => {
 						const res = await axios({
@@ -101,7 +141,7 @@ export default function CoverLetter() {
 										href={`data:text/json;charset=utf-8,${encodeURIComponent(
 											JSON.stringify(values),
 										)}`}
-										download="cover-letter.json"
+										download="cover-letter.mtec"
 									>
 										Download for later
 									</Button>
@@ -139,23 +179,27 @@ export default function CoverLetter() {
 								name="name"
 								label="Name"
 								placeholder="John Doe"
+								max={48}
 							/>
 							<Textarea
 								name="summary"
 								label="Summary"
 								placeholder="Energetic and passionate student with skills in leadership..."
 								rows={3}
+								max={512}
 							/>
 							<FormGroup>
 								<Input
 									name="hard_skills"
 									label="Hard skills"
 									placeholder="Microsoft Office, JIRA, Google Analytics, Photoshop"
+									max={128}
 								/>
 								<Input
 									name="soft_skills"
 									label="Soft skills"
 									placeholder="Empathy, communication, time management"
+									max={128}
 								/>
 							</FormGroup>
 							<Textarea
@@ -163,18 +207,21 @@ export default function CoverLetter() {
 								label="Experience"
 								placeholder="ETH Zürich, Teaching assistant for the Physics class, 2022-2023"
 								rows={5}
+								max={1024}
 							/>
 							<Textarea
 								name="education"
 								label="Education"
 								placeholder="ETH Zürich, MSc in Management, Technology and Economics, 2020-2023"
 								rows={5}
+								max={1024}
 							/>
 							<Textarea
 								name="projects"
 								label="Projects"
 								placeholder="MTEC.plus: the official website for MTEC students, 2023-Present"
 								rows={5}
+								max={1024}
 							/>
 							<div className={s.header}>
 								<h2 className={s.title}>Job</h2>
@@ -184,17 +231,20 @@ export default function CoverLetter() {
 									name="title"
 									label="Title"
 									placeholder="Digital Strategy Consultant"
+									max={64}
 								/>
 								<Input
 									name="company"
 									label="Company"
 									placeholder="Big4"
+									max={48}
 								/>
 							</FormGroup>
 							<Textarea
 								name="description"
 								label="Description"
 								rows={10}
+								max={2048}
 							/>
 							<div className={s.header}>
 								<h2>Generation</h2>
@@ -204,6 +254,7 @@ export default function CoverLetter() {
 								label="Motivation"
 								placeholder="What interests me in this role is ..."
 								rows={5}
+								max={1024}
 							/>
 							<FormGroup>
 								<Select name="language" label="Language">

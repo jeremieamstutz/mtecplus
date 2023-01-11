@@ -4,7 +4,7 @@ import { useLayoutEffect, useRef, useState } from 'react'
 
 import s from './textarea.module.css'
 
-export function Textarea({ name, label, onChange, style, ...props }) {
+export function Textarea({ name, label, onChange, style, max, ...props }) {
 	const [field, meta] = useField(name)
 
 	const textAreaRef = useRef()
@@ -39,6 +39,11 @@ export function Textarea({ name, label, onChange, style, ...props }) {
 					{...field}
 					{...props}
 				/>
+				{max && (
+					<div className={s.help}>
+						{field.value.length}/{max}
+					</div>
+				)}
 			</div>
 			{meta.touched && meta.error && (
 				<div className={s.error}>{meta.error}</div>
