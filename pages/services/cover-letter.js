@@ -1,8 +1,9 @@
-import { useRef, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import Link from 'next/link'
 import axios from 'axios'
 import { Form, Formik } from 'formik'
 import * as Yup from 'yup'
+import { useRouter } from 'next/router'
 
 import { useCopyToClipboard } from 'lib/hooks'
 
@@ -18,17 +19,19 @@ import {
 } from 'components/ui'
 
 import s from 'styles/pages/cover-letter.module.css'
-import { useRouter } from 'next/router'
 
 export default function CoverLetter() {
 	const router = useRouter()
-	router.push('https://www.usecatalyst.ch/services/cover-letter')
 
 	const fileInputRef = useRef()
 	const [text, setText] = useState('')
 	const [showModal, setShowModal] = useState(false)
 	const [copied, setCopied] = useState(false)
 	const copy = useCopyToClipboard()
+
+	useEffect(() => {
+		router.push('https://www.usecatalyst.ch/services/cover-letter')
+	}, [router])
 
 	function handleClose() {
 		const answer = confirm('Are you sure you want to close this window ?')
