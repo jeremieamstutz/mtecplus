@@ -18,8 +18,12 @@ import {
 } from 'components/ui'
 
 import s from 'styles/pages/cover-letter.module.css'
+import { useRouter } from 'next/router'
 
 export default function CoverLetter() {
+	const router = useRouter()
+	router.push('https://www.usecatalyst.ch/services/cover-letter')
+
 	const fileInputRef = useRef()
 	const [text, setText] = useState('')
 	const [showModal, setShowModal] = useState(false)
@@ -249,6 +253,14 @@ export default function CoverLetter() {
 							<div className={s.header}>
 								<h2>Generation</h2>
 							</div>
+							<Select name="type" label="Type">
+								<option value="response">
+									Response to a job offer
+								</option>
+								<option value="">
+									Unsolicited application
+								</option>
+							</Select>
 							<Textarea
 								name="motivation"
 								label="Motivation"

@@ -10,7 +10,7 @@ const services = [
 		icon: <BriefcaseIcon width={32} height={32} />,
 		name: 'AI Cover Letter',
 		description: 'Let GPT-3 write a beautiful cover letter',
-		link: '/services/cover-letter',
+		link: 'https://www.usecatalyst.ch/services/cover-letter',
 	},
 	{
 		icon: <DocumentsIcon width={32} height={32} />,
