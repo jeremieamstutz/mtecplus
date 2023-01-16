@@ -30,7 +30,7 @@ export default function CoverLetter() {
 	const copy = useCopyToClipboard()
 
 	useEffect(() => {
-		router.push('https://www.usecatalyst.ch/services/cover-letter')
+		router.push('https://www.usecatalyst.ch/cover-letter')
 	}, [router])
 
 	function handleClose() {
