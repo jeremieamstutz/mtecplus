@@ -17,11 +17,7 @@ export function Member({
 			/>
 			<div className={s.details}>
 				<h3 className={s.name}>{`${first_name} ${last_name}`}</h3>
-				{roles ? (
-					<div className={s.role}>{roles[0].name}</div>
-				) : (
-					<div>BSc Civil Engineering, EPFL</div>
-				)}
+				{roles && <div className={s.role}>{roles[0].name}</div>}
 			</div>
 		</Link>
 	)
