@@ -7,7 +7,7 @@ export function Member({
 	member: { slug, first_name, last_name, roles, picture },
 }) {
 	return (
-		<Link className={s.card} href={`/students/${slug}`}>
+		<Link className={s.card} href={`/directory/${slug}`}>
 			<Image
 				className={s.image}
 				alt={`${first_name} ${last_name}`}
@@ -17,7 +17,9 @@ export function Member({
 			/>
 			<div className={s.details}>
 				<h3 className={s.name}>{`${first_name} ${last_name}`}</h3>
-				{roles && <div className={s.role}>{roles[0].name}</div>}
+				{roles.length > 0 && (
+					<div className={s.role}>{roles[0].name}</div>
+				)}
 			</div>
 		</Link>
 	)

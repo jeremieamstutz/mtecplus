@@ -67,14 +67,14 @@ export async function getStaticProps() {
 		version: 'v4',
 	})
 
-	const response = await sheets.spreadsheets.values.get({
+	const directory = await sheets.spreadsheets.values.get({
 		spreadsheetId: '1TEujoucfd2n43tan5gH_pbKi9eyr7n3hZfpU6PDEDZg',
 		range: 'Directory',
 	})
 
-	const [header, types, ...rows] = response.data.values
+	let [header, types, ...rows] = directory.data.values
 
-	const people = []
+	let people = []
 	for (const row of rows) {
 		const person = {}
 		for (const [index, value] of row.entries()) {
@@ -83,7 +83,26 @@ export async function getStaticProps() {
 		people.push(person)
 	}
 
-	console.log(people)
+	const mtecplus = await sheets.spreadsheets.values.get({
+		spreadsheetId: '1TEujoucfd2n43tan5gH_pbKi9eyr7n3hZfpU6PDEDZg',
+		range: 'MTEC+',
+	})
+
+	;[header, types, ...rows] = mtecplus.data.values
+
+	const roles = []
+	for (const row of rows) {
+		const role = {}
+		for (const [index, value] of row.entries()) {
+			role[header[index]] = value
+		}
+		roles.push(role)
+	}
+
+	people = people.map((person) => ({
+		...person,
+		roles: roles.filter((role) => role.id === person.id) || [],
+	}))
 
 	return {
 		props: {

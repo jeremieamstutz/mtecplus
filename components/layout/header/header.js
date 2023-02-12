@@ -112,12 +112,12 @@ export function Header() {
 						Jobs
 					</Link>
 					<Link
-						href="/students"
+						href="/directory"
 						className={cn(s.link, {
 							[s.active]: router.pathname.startsWith('/students'),
 						})}
 					>
-						Students
+						Directory
 					</Link>
 				</nav>
 				<Link href="/login" className={s.login}>
